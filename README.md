@@ -1,42 +1,75 @@
-<div align="center">
+# 🧠 Algorithms & Logic Lab
 
-# 🧠 ALGORITHMS & LOGIC LAB 🧩
+Laboratório de **algoritmos, lógica de programação e fundamentos de ciência da computação** usando Python.
 
-<img src="https://img.shields.io/badge/LANGUAGE-PYTHON-blue?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/FOCUS-DATA_STRUCTURES_%26_LOGIC-purple?style=for-the-badge" />
-<img src="https://img.shields.io/badge/STATUS-ACTIVE-success?style=for-the-badge" />
+O objetivo é manter implementações pequenas, claras e testáveis para praticar raciocínio algorítmico e análise de eficiência.
 
-> *“Mastering the foundations of computational thinking, problem-solving, and algorithmic efficiency.”*
+## 🔬 Projeto atual
 
-</div>
+### Verificador de números primos
 
----
+O arquivo `verificador_primo.py` implementa `eh_primo()`, uma função que verifica se um número inteiro é primo.
 
-## 🔬 About This Repository
+A implementação usa divisores até a raiz quadrada e elimina previamente múltiplos de 2 e 3. Para os candidatos restantes, os testes avançam de 6 em 6, verificando as formas `6k - 1` e `6k + 1`.
 
-Welcome to my **algorithms-and-logic** repository! This space is dedicated to exploring, implementing, and optimizing core algorithms and data structures using Python. Each script is built with clean code principles, performance considerations, and rigorous documentation.
+A complexidade temporal é **O(√n)** no pior caso e o uso adicional de memória é **O(1)**.
 
-### 📂 What You Will Find Here:
-* **Logical Challenges:** Solutions to mathematical and structural programming problems.
-* **Data Structures:** Implementations and manipulations of core programming structures.
-* **Optimization Scripts:** Clean, efficient code focused on time and space complexity awareness.
+## 🛠️ Tecnologias
 
----
+- Python 3.10+
+- `unittest`
+- GitHub Actions
+- PEP 8 e type hints
 
-## 🛠️ Tech Stack & Standards
-* **Language:** Python 3.x
-* **Conventions:** PEP 8 compliance, descriptive variable naming, comprehensive docstrings.
+## ▶️ Como executar
 
----
+```bash
+python verificador_primo.py
+```
 
-## 👩‍💻 Author
+Depois, informe um número inteiro quando solicitado.
 
-<div align="center">
+## 🧪 Testes
 
-**Marcella Bongiolo**  
-*Future Software Engineer | UNESC Student*
+Execute:
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-marcellabongiolo-181717?style=flat-square&logo=github)](https://github.com/marcellabongiolo)
-[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-marcellabongiolo-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/marcellabongiolo)
+```bash
+python -m unittest discover -s tests -v
+```
 
-</div>
+Os testes cobrem números primos e compostos, valores menores que 2, entradas pares e múltiplas de 3 e casos de fronteira.
+
+A integração contínua executa os testes automaticamente em pushes para `main` e pull requests.
+
+## 📁 Estrutura
+
+```text
+algorithms-and-logic/
+├── .github/
+│   └── workflows/
+│       └── tests.yml
+├── tests/
+│   └── test_verificador_primo.py
+├── .gitignore
+├── LICENSE
+├── README.md
+└── verificador_primo.py
+```
+
+## 🚀 Próximos passos
+
+- adicionar busca binária e outros algoritmos clássicos;
+- estudar estruturas de dados;
+- comparar implementações por complexidade;
+- adicionar exercícios de ordenação;
+- documentar trade-offs de cada algoritmo.
+
+## 👩‍💻 Autora
+
+**Marcella Bongiolo**
+
+Este repositório faz parte da prática de desenvolvimento e estudos em programação.
+
+## 📄 Licença
+
+Distribuído sob a licença MIT.
